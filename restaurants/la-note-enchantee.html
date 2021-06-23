@@ -4,11 +4,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>La note enchantée</title>
-        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
     </head>
     <body>
         <header>
-            <a href="home.html"><img src="../icons/arrow-left-solid.svg" alt="icon back to home page"></a>
+            <a href="../home.html"><img class="icon" src="../icons/arrow-left-solid.svg" alt="icon back to home page"></a>
             <img src="../logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </header>
 
@@ -17,7 +17,7 @@
         <main>
             <header>
                 <h1>La note enchantée</h1>
-                <img src="../icons/heart-regular.svg" alt="icon like & save the menu">
+                <img class="icon" src="../icons/heart-regular.svg" alt="icon like & save the menu">
             </header>
             <section>
                 <h2>ENTRÉES</h2>
@@ -67,6 +67,7 @@
                     <img src="../icons/check-circle-solid.svg" alt="icon check">
                 </div>
             </section>
+            <section>
                 <h2>DESSERT</h2>
                 <div>
                     <h3>Macaron noisette et chocolat</h3>
@@ -86,21 +87,29 @@
                     <p>23€</p>
                     <img src="../icons/check-circle-solid.svg" alt="icon check">
                 </div>
+            </section>
+            <button class="btn-order btn">commander</button>
         </main>
         <footer>
-            <img src="../logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-            <ul>
-                <li>
-                    <a href=""><img src="../icons/utensils-solid.svg" alt="icon cutlery">Proposer un restaurant</a>
+            <h4>ohmyfood</h4>
+            <ul class="listfooter">
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="../icons/utensils-solid.svg" 
+                            alt="icon cutlery">Proposer un restaurant</a>
                 </li>
-                <li>
-                    <a href=""><img src="../icons/hands-helping-solid.svg" alt="icon handshake">Devenir partenaire</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="../icons/hands-helping-solid.svg" 
+                            alt="icon handshake">Devenir partenaire</a>
                 </li>
-                <li>
-                    <a href="">Mentions légales</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">Mentions légales</a>
                 </li>
-                <li>
-                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="mailto:contact@ohmyfood.com">Contact</a>
                 </li>
             </ul>
         </footer>
+    </body>
+</html>

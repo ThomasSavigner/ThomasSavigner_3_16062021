@@ -1,122 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>ohmyfood</title>
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
-        <header>
+        <header class="headerhome">
             <h1>ohmyfood</h1>
         </header>
         <main>
-            <section>
-                <form>
-                    <img src="icons/map-marker-alt-solid.svg" alt="icon localisation">
-                    <input type="search" placeholder="Paris, Belleville">
+            <section class="localisation">
+                <form class="research">
+                    <img class="research__icon icon" src="icons/map-marker-alt-solid.svg" alt="icon localisation">
+                    <input class="research__input" type="search" placeholder="Paris, Belleville">
                 </form>
-                <div>
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <button>Explorer nos restaurants</button>
+                <div class="research-sublevel">
+                    <h2 class="research-sublevel__title">Réservez le menu qui vous convient</h2>
+                    <p class="research-sublevel__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <button class="research-sublevel__btn">Explorer nos restaurants</button>
                 </div>
             </section>
-            <section>
-                <h2>Fonctionnement</h2>
-                <ol>
-                    <li>
-                        <img src="icons/mobile-alt-solid.svg" alt="icon smartphone">
+            <section class="operating">
+                <h2 class="operating__title">Fonctionnement</h2>
+                <ol class="list-steps">
+                    <li class="list-steps__item">
+                        <img class="icon operating__icon" src="icons/mobile-alt-solid.svg" alt="icon smartphone">
                         <span>Choisissez un restaurant</span>
                     </li>
-                    <li>
-                        <img src="icons/list-ul-solid.svg" alt="icon list">
+                    <li class="list-steps__item">
+                        <img class="icon operating__icon"  src="icons/list-ul-solid.svg" alt="icon list">
                         <span>Composez votre menu</span>
                     </li>
-                    <li>
-                        <img src="icons/store-solid.svg" alt="icon store">
+                    <li class="list-steps__item">
+                        <img class="icon operating__icon"  src="icons/store-solid.svg" alt="icon store">
                         <span>Dégustez au restaurant</span>
                     </li>
                 </ol>
             </section>
-            <section>
-                <h2>Restaurants</h2>
-                <div>
-                    <a href="">
-                        <div>
-                            <img src="images/la-palette-du-gout_restaurant.jpg" alt="A table set with a dish served">
-                            <span>Nouveau</span>
+            <section class="restaurants">
+                <h2 class="title2">Restaurants</h2>
+                <div class="container-restaurants">
+                    <a class="container-restaurants__card" href="restaurants/la-palette-du-gout.html">
+                        <div class="container-restaurants__card__img">
+                            <img class="container-restaurants__card__img--format"
+                                src="images/la-palette-du-gout_restaurant.jpg" 
+                                alt="A table set with a dish served">
+                            <span class="container-restaurants__card__img--label">Nouveau</span>
                         </div>
-                        <div>
-                            <div>
-                                <h3>La palette du goût</h3>
+                        <div class="container-restaurants__card__legend">
+                            <div class="container-restaurants__card__legend__name">
+                                <h3 class="container-restaurants__card__legend__name--title">La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
+                            <div class="container-restaurants__card__legend__heart">
+                                <img class="icon container-restaurants__card__legend__heart--clr" 
+                                    src="icons/heart-regular.svg" alt="icon like">
+                            </div>
+                        </div>
+                    </a>
+                    <a class="container-restaurants__card" href="restaurants/la-note-enchantee.html">
+                        <div class="container-restaurants__card__img">
+                            <img class="container-restaurants__card__img--format" 
+                                src="images/la-note-enchantee_restaurant.jpg" 
+                                alt="A dish seen from above">
+                            <span class="container-restaurants__card__img--label">Nouveau</span>
+                        </div>
+                        <div class="container-restaurants__card__legend">
+                            <div class="container-restaurants__card__legend__name">
+                                <h3 class="container-restaurants__card__legend__name--title">La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="container-restaurants__card__legend__heart">
+                                <img class="icon container-restaurants__card__legend__heart--clr"
+                                    src="icons/heart-regular.svg" alt="icon like">
+                            </div>
+                        </div>      
+                    </a>
+                    <a  class="container-restaurants__card" href="restaurants/a-la-francaise.html">
+                        <div class="container-restaurants__card__img">
+                            <img class="container-restaurants__card__img--format"
+                                src="images/a-la-francaise_restaurant.jpg" 
+                                alt="Dish with eggs, vegetable and bread">                    
+                        </div>
+                        <div class="container-restaurants__card__legend">
+                            <div class="container-restaurants__card__legend__name">
+                                <h3 class="container-restaurants__card__legend__name--title">À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
                             <div>
-                                <img src="icons/heart-regular.svg" alt="icon like">
+                                <img class="icon" src="icons/heart-regular.svg" alt="icon like">
+                            </div>
+                        </div>
+                    </a>
+                    <a  class="container-restaurants__card" href="restaurants/le-delice-des-sens.html">
+                        <div class="container-restaurants__card__img">
+                            <img class="container-restaurants__card__img--format"
+                                src="images/le-delice-des-sens_restaurant.jpg" 
+                                alt="A dish served on a rectangular plate">
+                        </div>
+                        <div class="container-restaurants__card__legend">
+                            <div class="container-restaurants__card__legend__name">
+                                <h3 class="container-restaurants__card__legend__name--title">Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="container-restaurants__card__legend__heart">
+                                <img class="icon container-restaurants__card__legend__heart--clr" src="icons/heart-regular.svg" alt="icon like">
                             </div>
                         </div>
                     </a>
                 </div>
-                <a href="">
-                    <div>
-                        <img src="images/la-note-enchantee_restaurant.jpg" alt="A dish seen from above">
-                        <span>Nouveau</span>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-                        <div>
-                            <img src="icons/heart-regular.svg" alt="icon like">
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="images/a-la-francaise_restaurant.jpg" alt="Dish with eggs, vegetable and bread">                    
-                    </div>
-                    <div>
-                        <div>
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <div>
-                            <img src="icons/heart-regular.svg" alt="icon like">
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="images/le-delice-des-sens_restaurant.jpg" alt="A dish served on a rectangular plate">
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <div>
-                            <img src="icons/heart-regular.svg" alt="icon like">
-                        </div>
-                    </div>
-                </a>
             </section>
         </main>
         <footer>
-            <img src="logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-            <ul>
-                <li>
-                    <a href=""><img src="icons/utensils-solid.svg" alt="icon cutlery">Proposer un restaurant</a>
+            <h4>ohmyfood</h4>
+            <ul class="listfooter">
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="icons/utensils-solid.svg" 
+                            alt="icon cutlery">Proposer un restaurant</a>
                 </li>
-                <li>
-                    <a href=""><img src="icons/hands-helping-solid.svg" alt="icon handshake">Devenir partenaire</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="icons/hands-helping-solid.svg" 
+                            alt="icon handshake">Devenir partenaire</a>
                 </li>
-                <li>
-                    <a href="">Mentions légales</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">Mentions légales</a>
                 </li>
-                <li>
-                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="mailto:contact@ohmyfood.com">Contact</a>
                 </li>
             </ul>
         </footer>
+    </body>
+</html>

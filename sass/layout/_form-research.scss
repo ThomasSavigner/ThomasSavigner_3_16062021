@@ -1,0 +1,18 @@
+.research {
+    background-color: $research-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0 3% 0;
+    &__icon {
+        margin-right: 3%;
+    }
+    &__input {
+        font-weight: bold;
+        background-color: $research-bg;
+        border-style: none;
+        padding-top: 1%;
+        width: 35%;
+        max-width: 140px;    
+    }
+}
