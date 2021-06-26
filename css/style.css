@@ -23,7 +23,6 @@ h1 {
   font-family: Shrikhand-Regular;
   font-size: 1.7rem;
   text-align: center;
-  padding: 2% 0 2% 0;
   margin: 0;
 }
 
@@ -37,7 +36,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 0 1em 0;
+  padding: 1em 0 1.5em 0;
 }
 
 .research__icon {
@@ -85,12 +84,17 @@ footer h4 {
   margin-right: 2%;
 }
 
-.headerhome {
+.hdrmain {
   border-bottom: 2px inset #c5c0c0;
+  padding: 3% 0 3% 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
 }
 
 .research-sublevel {
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +141,7 @@ footer h4 {
 
 .operating .list-steps__item {
   counter-increment: number;
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   box-shadow: 0.25rem 0.25rem 5px #c5c0c0;
   border-radius: 25px;
   padding: 20px 0 20px 30px;
@@ -155,7 +159,7 @@ footer h4 {
   padding: 4px 8px;
   color: white;
   position: absolute;
-  left: -.9em;
+  left: -.65em;
 }
 
 .operating .list-steps__item .operating__icon {
@@ -164,7 +168,7 @@ footer h4 {
 }
 
 .restaurants {
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   padding: 7% 0 7% 0;
 }
 
@@ -229,15 +233,169 @@ footer h4 {
 }
 
 .container-restaurants__card__legend__heart {
-  padding-bottom: 4%;
+  padding-bottom: 2%;
 }
 
 .container-restaurants__card__legend__heart--clr {
   width: 1.7em;
 }
 
-h1 {
-  font-family: Shrikhand-Regular;
+/** Style des pages de menu **/
+.hdrpge {
+  padding: 5% 0% 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
+.hdrpge__icon {
+  width: 1em;
+  opacity: 0.5;
+  position: absolute;
+  left: 2em;
+}
+
+.hdrpge__logo {
+  width: 10em;
+}
+
+.illustration {
+  height: 15em;
+}
+
+.illustration--fit {
+  width: 100%;
+  height: 17em;
+  object-fit: cover;
+}
+
+.blockmenu {
+  position: relative;
+  background-color: #eeeeee;
+  padding-top: 5%;
+  border-radius: 40px 40px 0 0;
+}
+
+.hdrsections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hdrsections__namerestaurant {
+  padding-left: 5%;
+}
+
+.hdrsections__icon {
+  padding-right: 10%;
+  width: 1.5em;
+  opacity: 0.5;
+}
+
+.menusection__title {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  opacity: 0.5;
+  font-weight: normal;
+  position: relative;
+}
+
+.menusection__title::before {
+  content: "";
+  background-color: #4acbab;
+  width: 2.5em;
+  height: 0.2em;
+  position: absolute;
+  top: 1.5em;
+}
+
+.menusection__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menusection__block__btn {
+  background-color: white;
+  width: 330px;
+  height: 75px;
+  border-radius: 20px;
+  box-shadow: 0.25rem 0.25rem 5px #c5c0c0;
+  padding: 0 0 0 1em;
+  margin: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menusection__block__btn__name {
+  width: 12em;
+}
+
+.menusection__block__btn__name__title {
+  font-size: 1em;
+  margin: 2% 0 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menusection__block__btn__name__details {
+  margin: 1% 0 2% 0;
+  opacity: 0.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menusection__block__btn__price {
+  padding-top: 1.5em;
+  font-weight: bold;
+}
+
+.menusection__block__btn__order {
+  background-color: #99E2D0;
+  width: 65px;
+  height: 75px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menusection__block__btn__order__container {
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  width: 2em;
+  height: 2em;
+}
+
+.menusection__block__btn__order__container__icon {
+  width: 1.2em;
+}
+
+.container-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15% 0 25% 0;
+}
+
+.container-order__btn {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1.2em 3em 1.2em 3em;
+  border-radius: 25px;
+  border: none;
+  text-decoration: none;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0.25rem 0.25rem 5px #c5c0c0;
 }
 
 /* 				1. Utils :

@@ -1,3 +1,156 @@
-h1 {
-    font-family: Shrikhand-Regular;
+/** Style des pages de menu **/
+
+.hdrpge {
+    padding: 5% 0% 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+
+    &__icon {
+        width: 1em;
+        opacity: 0.5;
+        position: absolute;
+        left: 2em;
+    }
+
+    &__logo {
+        width: 10em;
+    }
+}
+
+.illustration {
+    height: 15em;
+    
+    &--fit {
+        width: 100%;
+        height: 17em;
+        object-fit: cover;    
+    }
+}
+
+.blockmenu {
+    position: relative;
+    background-color: $generic-bg;
+    padding-top: 5%;
+    border-radius: 40px 40px 0 0;
+}
+
+.hdrsections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__namerestaurant {
+         padding-left: 5%;
+    }
+
+    &__icon {
+        padding-right: 10%;
+        width: 1.5em;
+        opacity: 0.5;
+    }
+}
+.menusection {
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        opacity: 0.5;
+        font-weight: normal;
+        position: relative;
+
+        &::before {
+            content:"";
+            background-color: darken($tertiary-clr, 20%);
+            width: 2.5em;
+            height: 0.2em;
+            position: absolute;
+            top: 1.5em;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__btn {
+            background-color: white;
+            width: 330px;
+            height: 75px;
+            border-radius: 20px;
+            @include shadow;
+            padding: 0 0 0 1em;
+            margin: 3%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+
+            &__name {
+                width: 12em;
+                
+                &__title {
+                    font-size: 1em;
+                    margin: 2% 0 0 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                &__details {
+                    margin: 1% 0 2% 0;
+                    opacity: 0.5;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+
+            &__price {
+                padding-top: 1.5em;
+                font-weight: bold;
+            }
+
+            &__order {
+                background-color: $tertiary-clr;
+                width: 65px;
+                height: 75px;
+                border-radius: 0 20px 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                 
+
+                &__container {
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 100px;
+                    width: 2em;
+                    height: 2em;
+                    
+                    &__icon {
+                        width: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+.container-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15% 0 25% 0;
+
+
+    &__btn {
+        @include btn-basic;
+        @include gradation-btn;
+        @include shadow;
+    }
 }

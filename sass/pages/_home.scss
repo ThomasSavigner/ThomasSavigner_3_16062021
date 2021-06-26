@@ -1,5 +1,10 @@
-.headerhome {
+.hdrmain {
     border-bottom: 2px inset $shadow;
+    padding: 3% 0 3% 0;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
 }
 
 .research-sublevel {
@@ -55,7 +60,7 @@
                 padding: 4px 8px;
                 color: white;
                 position: absolute;     
-                left: -.9em;
+                left: -.65em;
             }
 
             .operating__icon {
@@ -123,6 +128,7 @@
                     margin-bottom: 5%; 
                     font-size: 1em;
                 }
+
                 &--adress {
                     margin-top:0;
                     margin-bottom:10%;
@@ -130,10 +136,10 @@
             }
 
             &__heart {
-                padding-bottom: 4%;
+                padding-bottom: 2%;
+
                 &--clr {
                     width: 1.7em;
-                
                 }
             }
         }    
