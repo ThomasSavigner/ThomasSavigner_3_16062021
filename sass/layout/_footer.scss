@@ -1,0 +1,33 @@
+footer {
+    background-color: rgb(56, 54, 54);  
+    padding: 2% 0 0 5%;
+    color: white;
+    & h4 {
+        font-family: Shrikhand-Regular;
+        font-size: 1rem;
+    }
+}
+
+.listfooter {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 5%;
+    margin: 0;
+    &__item {
+        margin-bottom: 2%;
+    }
+}
+
+.linkfooter {
+    text-decoration: none;
+    color: white;
+    &__icon {
+        width: 0.8rem;
+        margin-right: 2%;
+    }
+}
+
+
+
+
+
