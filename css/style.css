@@ -411,6 +411,7 @@ footer h4 {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .illustration {
+    width: 100%;
     position: fixed;
     top: 3.8em;
     z-index: -2;
@@ -419,6 +420,7 @@ footer h4 {
 
 @media (min-width: 1441px) {
   .illustration {
+    width: 100%;
     position: fixed;
     top: 3.8em;
     z-index: -2;
