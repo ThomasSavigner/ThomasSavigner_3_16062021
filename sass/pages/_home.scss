@@ -1,26 +1,27 @@
-.hdrmain {
-    border-bottom: 2px inset $shadow;
-    padding: 3% 0 3% 0;
-    position: fixed;
-    background-color: white;
-    width: 100%;
-    z-index: 1;
-}
+/** Style de la page index **/
 
 .research-sublevel {
     background-color: $generic-bg;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5% 0 12% 0;
+    padding: 2em 0 3em 0;
+
     &__title {
-        padding: 0 20% 0 20%;
+        padding: 0 4em 0 4em;
+        margin: 0;
         margin-bottom: 0;
         text-align: center;
+        @include mini-mobile {
+        padding: 0 2em 0 2em;
+        }
     }
     &__subtitle {
-        padding: 0 10% 2% 10%;
-        text-align: center
+        padding: 0 2em 1em 2em;
+        text-align: center;
+        @include mini-mobile {
+            padding: 0 1em 1em 1em;
+        }
     }
     &__btn {
         @include btn-basic;
@@ -28,28 +29,59 @@
         @include shadow;
     }
 }
+
 .operating {
-    width: 100%;
-    padding: 7% 0 7% 0;
-    
-    .list-steps {
+    padding: 1.5em 0 3em 0;
+    @include desktop-L {
+        margin-right: 1%; 
+    }
+
+    &__hdr {
+        margin-left: 1em;
+        @include tablet {
+            display: flex;
+            justify-content: center; 
+        };
+        @include desktop {
+            display: flex;
+            justify-content: center; 
+        };
+        @include desktop-L {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    &__list-steps {
         list-style-type: none; 
         counter-reset: number;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 95%;
-        padding-left: 4%;
+        margin: 1.5em 0 0 .85em;
+        padding-left: 0;
+        @include tablet {
+            margin-left: 1.75em;
+        };
+        @include desktop {
+            margin-left: 2em;
+        };
+        @include desktop-L {
+            margin-left: 3%;
+        };
         
         &__item {
             counter-increment: number;
             background-color: $generic-bg;
             @include shadow;
             border-radius: 25px;
-            padding: 20px 0 20px 30px;
-            margin-bottom: 7%;
+            padding: 20px 0 20px 40px;
+            margin: 0 0 1.25em 0;
             position: relative;
             width: 85%;
+            max-width: 19em;
             display: flex;
             align-items: center;
             
@@ -63,35 +95,75 @@
                 left: -.65em;
             }
 
-            .operating__icon {
+            &__icon {
                 margin-right: 1.5em;
                 width: 1rem;
             }
         }    
     }
 }
+
 .restaurants {
     background-color: $generic-bg;
-    padding: 7% 0 7% 0;
+    padding: 1.5em 0 3em 0;
 
-    &__title {
-        margin-bottom: 5%;
+    &__hdr {
+        margin-left: 1em;
+        @include tablet {
+            display: flex;
+            justify-content: center; 
+        };
+        @include desktop {
+            display: flex;
+            justify-content: center; 
+        };
+        @include desktop-L {
+            display: flex;
+            justify-content: center; 
+        };
     }
 }
 
 .container-restaurants {
+    margin-top: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    margin: 1.5em 0 0 0;
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 6em 0 6em;
+    };
+    @include desktop-L {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 6em 0 6em;
+    };
 
     &__card {
-        width: 92%;
+        width: 90%;
         text-decoration: none;
         color: black;
+        background-color: white;
         @include shadow;
         border-radius: 20px;
-        margin-bottom: 5%;
+        margin-bottom: 1em;
+        @include tablet {
+            max-width: 43em;
+        };
+        @include desktop {
+            width: 45%;
+            max-width: 40em;
+            margin-bottom: 4%;
+        };
+        @include desktop-L {
+            width: 45%;
+            max-width: 40em;
+            margin-bottom: 4%;
+        };
         
         &__img {
             position: relative;

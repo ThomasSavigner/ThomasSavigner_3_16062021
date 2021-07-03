@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/style.css"/>
     </head>
     <body>
-        <header class="hdrpge">
+        <header class="hdrmain hdrpge">
             <a class="hdrpge__icon" href="../index.html">
                 <img src="../icons/arrow-left-solid.svg" alt="icon back to home page">
             </a>
@@ -18,14 +18,16 @@
             <img class="illustration--fit" src="../images/la-palette-du-gout_restaurant.jpg" 
                 alt="A table set with a dish served">
         </div>
-        <main>
+        <main class="main-menu">
             <div class="blockmenu">
                 <header class="hdrsections">
                     <h1 class="hdrsections__namerestaurant">La palette du goût</h1>
                     <img class="hdrsections__icon" src="../icons/heart-regular.svg" alt="icon like & save the menu">
                 </header>
                 <section class="menusection">
-                    <h2 class="menusection__title">entrées</h2>
+                    <header class="menusection__hdr">
+                        <h2 class="menusection__hdr__title">entrées</h2>
+                    </header>
                     <div class="menusection__block">
                         <div class="menusection__block__btn">
                             <div class="menusection__block__btn__name">
@@ -69,7 +71,9 @@
                     </div>
                 </section>
                 <section class="menusection">
-                    <h2 class="menusection__title">plats</h2>
+                    <header class="menusection__hdr">
+                        <h2 class="menusection__hdr__title">plats</h2>
+                    </header>
                     <div class="menusection__block">
                         <div class="menusection__block__btn">
                             <div class="menusection__block__btn__name">
@@ -113,7 +117,9 @@
                     </div>
                 </section>
                 <section class="menusection">
-                    <h2 class="menusection__title">désserts</h2>
+                    <header class="menusection__hdr">
+                        <h2 class="menusection__hdr__title">désserts</h2>
+                    </header>
                     <div class="menusection__block">
                         <div class="menusection__block__btn">
                             <div class="menusection__block__btn__name">
@@ -161,7 +167,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer class="footer-menu">
             <h4>ohmyfood</h4>
             <ul class="listfooter">
                 <li class="listfooter__item">
