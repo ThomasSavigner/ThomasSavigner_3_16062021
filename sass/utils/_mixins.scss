@@ -17,17 +17,17 @@
 }
 
 @mixin mini-mobile {
-    @media screen and (max-width: 374px){@content;}
+    @media (max-width: 374px){@content;}
 }
 
 @mixin tablet {
-    @media screen and (min-width: 768px) and (max-width: 1024px){@content;}
+    @media (min-width: 768px) and (max-width: 1024px){@content;}
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1024px) and (max-width: 1440px){@content;}
+    @media (min-width: 1025px) and (max-width: 1440px){@content;}
 }
 
 @mixin desktop-L {
-    @media screen and (min-width: 1440px){@content;}
+    @media (min-width: 1441px){@content;}
 } 
