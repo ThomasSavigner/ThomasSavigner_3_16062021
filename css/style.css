@@ -13,6 +13,15 @@
   width: 0.7rem;
 }
 
+@keyframes fullheart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes loadingbtnstep {
   from {
     opacity: 0;
@@ -395,6 +404,10 @@ footer h4 {
 }
 
 /** Style des pages de menu **/
+.hdrpge {
+  z-index: 2;
+}
+
 .hdrpge__icon {
   width: 1em;
   opacity: 0.5;
@@ -584,10 +597,36 @@ footer h4 {
   }
 }
 
-.hdrsections__icon {
+.hdrsections__likecontainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.hdrsections__likecontainer:hover > .hdrsections__likecontainer--full {
+  animation: fullheart .5s forwards;
+}
+
+.hdrsections__likecontainer:hover > .hdrsections__likecontainer--empty {
+  animation: fullheart .5s forwards reverse;
+}
+
+.hdrsections__likecontainer--empty {
   margin-right: .5em;
-  width: 1.5em;
-  opacity: 0.5;
+  width: 2em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 0;
+}
+
+.hdrsections__likecontainer--full {
+  opacity: 0;
+  margin-right: .5em;
+  width: 2em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 1;
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
