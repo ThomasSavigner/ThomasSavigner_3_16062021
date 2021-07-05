@@ -411,6 +411,7 @@ footer h4 {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .illustration {
+    width: 100%;
     position: fixed;
     top: 3.8em;
     z-index: -2;
@@ -419,6 +420,7 @@ footer h4 {
 
 @media (min-width: 1441px) {
   .illustration {
+    width: 100%;
     position: fixed;
     top: 3.8em;
     z-index: -2;
@@ -663,7 +665,6 @@ footer h4 {
 .menusection__block__btn {
   background-color: white;
   width: 90%;
-  max-width: 25em;
   height: 75px;
   border-radius: 20px;
   box-shadow: 0.25rem 0.25rem 5px #c5c0c0;
@@ -672,10 +673,20 @@ footer h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+}
+
+.menusection__block__btn:hover > .menusection__block__btn__order {
+  margin-right: 0;
+}
+
+.menusection__block__btn:hover > .menusection__block__btn__order > .menusection__block__btn__order__container {
+  transform: rotate(360deg);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .menusection__block__btn {
+    width: 23em;
     box-shadow: none;
   }
 }
@@ -693,7 +704,10 @@ footer h4 {
 }
 
 .menusection__block__btn__name {
-  width: 180px;
+  width: 85%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menusection__block__btn__name__title {
@@ -713,19 +727,22 @@ footer h4 {
 }
 
 .menusection__block__btn__price {
-  width: 30px;
-  padding-top: 1.5em;
+  width: 25px;
   font-weight: bold;
+  text-align: center;
+  padding: 1.4em 1.5em 0 1em;
 }
 
 .menusection__block__btn__order {
   background-color: #99E2D0;
-  width: 70px;
+  width: 80px;
   height: 75px;
   border-radius: 0 20px 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: -5em;
+  transition-duration: .5s;
 }
 
 .menusection__block__btn__order__container {
@@ -733,6 +750,8 @@ footer h4 {
   justify-content: center;
   border-radius: 100px;
   width: 35px;
+  transform: rotate(0deg);
+  transition-duration: .65s;
 }
 
 .menusection__block__btn__order__container__icon {
