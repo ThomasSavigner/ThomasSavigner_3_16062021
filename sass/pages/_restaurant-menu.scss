@@ -215,6 +215,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        & > .btn {
+            @include loadingbtn;
+        }
+
         
         &__btn {
             background-color: white;
