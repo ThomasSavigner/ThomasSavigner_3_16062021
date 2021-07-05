@@ -214,11 +214,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        
         &__btn {
             background-color: white;
             width: 90%;
-            max-width: 25em;
             height: 75px;
             border-radius: 20px;
             @include shadow;
@@ -227,7 +226,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            overflow: hidden;
+            
+            &:hover {
+
+                & > .menusection__block__btn__order {
+                    margin-right: 0;
+                
+                    & > .menusection__block__btn__order__container {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+           
             @include tablet {
+                width: 23em;
                 box-shadow: none;
             };
             @include desktop {
@@ -238,8 +251,10 @@
             };
 
             &__name {
-                width: 180px;
-                
+                width: 85%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
                 &__title {
                     font-size: 1em;
                     margin: 2% 0 0 0;
@@ -253,31 +268,36 @@
                     opacity: 0.5;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    overflow: hidden;
+                    overflow: hidden; 
                 }
             }
 
             &__price {
-                width: 30px;
-                padding-top: 1.5em;
+                width: 25px;
                 font-weight: bold;
+                text-align: center;
+                padding: 1.4em 1.5em 0 1em;
             }
 
             &__order {
                 background-color: $tertiary-clr;
-                width: 70px;
+                width: 80px;
                 height: 75px;
                 border-radius: 0 20px 20px 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-right: -5em;
+                transition-duration: .5s;
 
                 &__container {
                     display: flex;
                     justify-content: center;
                     border-radius: 100px;
                     width: 35px;
-                    
+                    transform: rotate(0deg);
+                    transition-duration: .65s;
+
                     &__icon {
                         width: 1.2em;
                     }
@@ -292,6 +312,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2.5em 0 5em 0;
+
     @include desktop {
         width: 100%;
         padding: 5em 2em 0em 0;
@@ -300,6 +321,7 @@
         width: 100%;
         padding: 5em 2em 0em 0;
     }
+
     &__btn {
         @include btn-basic;
         @include gradation-btn;
@@ -307,6 +329,7 @@
         @include tablet {
             box-shadow: none;
         };
+
         @include desktop {
             box-shadow: none;
         };
