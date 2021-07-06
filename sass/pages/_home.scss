@@ -27,6 +27,11 @@
         @include btn-basic;
         @include gradation-btn;
         @include shadow;
+
+        &:hover {
+            @include hover-btn--light;
+            @include hover-btn--shadow;
+        }
     }
 }
 
@@ -84,6 +89,18 @@
             max-width: 19em;
             display: flex;
             align-items: center;
+
+            &:hover {
+                background-color: lighten($primary-clr, 30%)
+            }
+
+            &:hover > .operating__list-steps__item__icon {
+                opacity: 0;
+            }
+
+            &:hover > .operating__list-steps__item__iconhover {
+                opacity: 1;
+            } 
             
             &::before {
                 content: counter(number);
@@ -98,6 +115,13 @@
             &__icon {
                 margin-right: 1.5em;
                 width: 1rem;
+            }
+
+            &__iconhover {
+                opacity: 0;
+                width: 1em;
+                position: relative;
+                right: 2.5em;
             }
         }    
     }

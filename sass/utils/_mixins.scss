@@ -1,9 +1,9 @@
 @mixin btn-basic {
     color: white;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 1.2em 3em 1.2em 3em;
-    border-radius: 25px;
+    font-size: 1.25em;
+    
+    padding: 1em 2.5em 1em 2.5em;
+    border-radius: 35px;
     border: none;
     text-decoration: none;
 }
@@ -16,6 +16,13 @@
     background-image: linear-gradient(0deg,$primary-clr, $secundary-clr);
 }
 
+@mixin hover-btn--light {
+    opacity: 0.75;
+}
+
+@mixin hover-btn--shadow {
+    box-shadow: 0.25rem 0.25rem 10px darken($shadow, 50%)
+}
 @mixin mini-mobile {
     @media (max-width: 374px){@content;}
 }
