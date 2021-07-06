@@ -358,6 +358,12 @@
         @include btn-basic;
         @include gradation-btn;
         @include shadow;
+
+        &:hover {
+            @include hover-btn--light;
+            @include hover-btn--shadow;
+        }
+        
         @include tablet {
             box-shadow: none;
         };
