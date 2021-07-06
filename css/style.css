@@ -13,6 +13,15 @@
   width: 0.7rem;
 }
 
+@keyframes fullheart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes loadingbtnstep {
   from {
     opacity: 0;
@@ -314,24 +323,22 @@ footer h4 {
   }
 }
 
-.container-restaurants__card {
-  width: 90%;
-  text-decoration: none;
-  color: black;
+.container-restaurants__shop {
+  width: 93%;
   background-color: white;
   box-shadow: 0.25rem 0.25rem 5px #c5c0c0;
-  border-radius: 20px;
-  margin-bottom: 1em;
+  border-radius: 15px;
+  margin-bottom: 1.5em;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .container-restaurants__card {
+  .container-restaurants__shop {
     max-width: 43em;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .container-restaurants__card {
+  .container-restaurants__shop {
     width: 45%;
     max-width: 40em;
     margin-bottom: 4%;
@@ -339,25 +346,31 @@ footer h4 {
 }
 
 @media (min-width: 1441px) {
-  .container-restaurants__card {
+  .container-restaurants__shop {
     width: 45%;
     max-width: 40em;
     margin-bottom: 4%;
   }
 }
 
-.container-restaurants__card__img {
+.container-restaurants__shop__card {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.container-restaurants__shop__card__img {
   position: relative;
 }
 
-.container-restaurants__card__img--format {
+.container-restaurants__shop__card__img--format {
   object-fit: cover;
   height: 180px;
   width: 100%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
-.container-restaurants__card__img--label {
+.container-restaurants__shop__card__img--label {
   font-size: 0.9em;
   font-weight: bold;
   background-color: #99E2D0;
@@ -368,33 +381,62 @@ footer h4 {
   right: 1em;
 }
 
-.container-restaurants__card__legend {
+.container-restaurants__shop__card__legend {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10% 0 5%;
+  flex-direction: column;
+  padding-left: 1em;
 }
 
-.container-restaurants__card__legend__name--title {
-  margin-top: 8%;
-  margin-bottom: 5%;
+.container-restaurants__shop__card__legend--title {
+  margin-top: .5em;
+  margin-bottom: .5em;
   font-size: 1em;
 }
 
-.container-restaurants__card__legend__name--adress {
+.container-restaurants__shop__card__legend--adress {
   margin-top: 0;
-  margin-bottom: 10%;
+  margin-bottom: .75em;
 }
 
-.container-restaurants__card__legend__heart {
-  padding-bottom: 2%;
+.container-restaurants__shop__likecontainer {
+  cursor: pointer;
+  position: relative;
+  top: -1.95em;
+  left: -4.25em;
 }
 
-.container-restaurants__card__legend__heart--clr {
+.container-restaurants__shop__likecontainer:hover > .container-restaurants__shop__likecontainer--empty {
+  animation: fullheart .5s forwards reverse;
+}
+
+.container-restaurants__shop__likecontainer:hover > .container-restaurants__shop__likecontainer--full {
+  animation: fullheart .5s forwards;
+}
+
+.container-restaurants__shop__likecontainer--empty {
   width: 1.7em;
+  margin-right: .5em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 0;
+}
+
+.container-restaurants__shop__likecontainer--full {
+  width: 1.7em;
+  opacity: 0;
+  margin-right: .5em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 1;
 }
 
 /** Style des pages de menu **/
+.hdrpge {
+  z-index: 2;
+}
+
 .hdrpge__icon {
   width: 1em;
   opacity: 0.5;
@@ -584,10 +626,36 @@ footer h4 {
   }
 }
 
-.hdrsections__icon {
+.hdrsections__likecontainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.hdrsections__likecontainer:hover > .hdrsections__likecontainer--empty {
+  animation: fullheart .5s forwards reverse;
+}
+
+.hdrsections__likecontainer:hover > .hdrsections__likecontainer--full {
+  animation: fullheart .5s forwards;
+}
+
+.hdrsections__likecontainer--empty {
   margin-right: .5em;
-  width: 1.5em;
-  opacity: 0.5;
+  width: 2em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 0;
+}
+
+.hdrsections__likecontainer--full {
+  opacity: 0;
+  margin-right: .5em;
+  width: 2em;
+  position: absolute;
+  right: -2em;
+  top: -1.15em;
+  z-index: 1;
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
