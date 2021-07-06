@@ -148,12 +148,12 @@
         position: relative;
         cursor: pointer;
         
-        &:hover > .hdrsections__likecontainer--full {
-            animation: fullheart .5s forwards;
-        }
-
         &:hover > .hdrsections__likecontainer--empty {
             animation: fullheart .5s forwards reverse;
+        }
+        
+        &:hover > .hdrsections__likecontainer--full {
+            animation: fullheart .5s forwards;
         }
 
         &--empty {
