@@ -38,7 +38,7 @@
 .operating {
     padding: 1.5em 0 3em 0;
     @include desktop-L {
-        margin-right: 1%; 
+        margin-right: 1%;
     }
 
     &__hdr {
@@ -87,11 +87,13 @@
             position: relative;
             width: 85%;
             max-width: 19em;
+            height: 20px;
             display: flex;
             align-items: center;
 
             &:hover {
-                background-color: lighten($primary-clr, 30%)
+                background-color: lighten($primary-clr, 30%);
+                @include hover-btn--shadow; 
             }
 
             &:hover > .operating__list-steps__item__icon {
@@ -170,6 +172,11 @@
     &__shop {
         width: 93%;
         background-color: white;
+
+        &:hover {
+            @include hover-btn--shadow;
+        }
+
         @include shadow;
         border-radius: 15px;
         margin-bottom: 1.5em;

@@ -212,19 +212,25 @@
                 background-color: lighten($primary-clr, 25%);
                 opacity: 1;
                 width: auto;
+                height: 25px;
                 padding-left: .5em;
                 padding-right: .5em;
                 border-radius: 20px;
                 margin-left: 14em;
+                border: 4px ridge darken($tertiary-clr, 20%);
+                padding-top: .1em;
             };
             @include desktop-L {
                 background-color: lighten($primary-clr, 25%);
                 opacity: 1;
                 width: auto;
+                height: 25px;
                 padding-left: .5em;
                 padding-right: .5em;
                 border-radius: 20px;
                 margin-left: 14em;
+                border: 4px ridge darken($tertiary-clr, 20%);
+                padding-top: .1em;
             };
 
             &::before {
@@ -234,6 +240,12 @@
                 height: 0.2em;
                 position: absolute;
                 top: 1.5em;
+                @include desktop {
+                    display: none;
+                }
+                @include desktop-L{
+                    display: none;
+                }
             }
         }
     }
@@ -261,7 +273,8 @@
             overflow: hidden;
             
             &:hover {
-
+                @include hover-btn--shadow;
+                
                 & > .menusection__block__btn__order {
                     margin-right: 0;
                 
@@ -274,12 +287,26 @@
             @include tablet {
                 width: 23em;
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow ($primary-clr); 
+                }
             };
+
             @include desktop {
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow ($primary-clr); 
+                }
             };
+
             @include desktop-L {
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow ($primary-clr); 
+                }
             };
 
             &__name {

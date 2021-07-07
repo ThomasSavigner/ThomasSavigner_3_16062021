@@ -1,0 +1,123 @@
+
+@keyframes ball-rotation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes loading-spinner {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+.background-loading-spinner {
+    background-color: $generic-bg;
+    position: fixed;
+    top: 3.25em;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: loading-spinner 1s 3s ease both;
+
+    
+    &__tray {
+        width: 85%;
+        max-width: 25em;
+        background-color: darken($generic-bg, 25%);
+        display: flex;
+        justify-content: space-evenly;
+        padding: 4em 1em 4em 1em;
+        border-radius: 15px;
+
+        &__fork-container {
+            
+            position: relative;
+            left: 1.5em;
+
+            &--icon {
+                width: 5.5em;
+                
+            }
+        }
+
+        &__dish-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -1em;
+            position: relative;
+            left: 3em;
+
+
+            &--large-dish {
+                width: 7em;
+                height: 7em;
+                background-color: $secundary-clr;
+                margin-left: .5em;
+                border-radius: 75px;
+                border: 2px solid black;
+            }
+
+            &--large-ring {
+                width: .6em;
+                height: .6em;
+                background-color: black;
+                border-radius: 50px;
+                position: relative;
+                left: -.45em;
+                animation: ball-rotation 2.5s infinite linear reverse;
+                transform-origin: -3.25em;
+            }
+
+            &--small-dish {
+                width: 4.5em;
+                height: 4.5em;
+                background-color: $tertiary-clr;
+                border-radius: 50px;
+                position: relative;
+                left: -6.5em;
+                border: 2px solid black;
+            }
+
+            &__balls-container {
+
+                &--ball-rotate {
+                width: .6em;
+                height: .6em;
+                background-color: black;
+                border-radius: 50px;
+                position: relative;
+                }
+
+                & > .ball-rotation {
+
+                    @include rotations-delay;
+                    
+                }
+            }
+        }
+
+        &__knife-container {
+            position: relative;
+            left: -1.5em;
+
+            &--icon {
+                width: 5.5em;
+            }
+        }
+    }
+}
+

@@ -20,8 +20,8 @@
     opacity: 0.75;
 }
 
-@mixin hover-btn--shadow {
-    box-shadow: 0.25rem 0.25rem 10px darken($shadow, 50%)
+@mixin hover-btn--shadow ($i:$shadow-dark) {
+    box-shadow: 0.25rem 0.25rem 10px $i;
 }
 @mixin mini-mobile {
     @media (max-width: 374px){@content;}
@@ -37,4 +37,15 @@
 
 @mixin desktop-L {
     @media (min-width: 1441px){@content;}
-} 
+}
+
+@mixin rotations-delay {
+    @for $i from 1 through 5 {
+        &--#{$i} {
+            left: -7.25em;
+            top: 0.45em+(-0.6em*$i);
+            animation: ball-rotation 1.8s 0.1s*$i infinite ease;
+            transform-origin: -1.55em 1.7em;
+        }
+    }   
+}
