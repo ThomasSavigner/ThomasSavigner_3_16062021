@@ -1,14 +1,3 @@
-
-@keyframes ball-rotation {
-    from {
-        transform: rotate(0);
-    }
-
-    to {
-        transform: rotate(1turn);
-    }
-}
-
 @keyframes loading-spinner {
     from {
         opacity: 1;
@@ -19,10 +8,40 @@
     }
 }
 
+
+@keyframes timer {
+    
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes ball-rotation {
+    
+    from {
+        transform: rotate(0)
+    };
+
+    to {
+        transform: rotate(1turn)
+    };
+
+}
+
+
+
+
 .background-loading-spinner {
     background-color: $generic-bg;
     position: fixed;
-    top: 3.25em;
+    top: 2em;
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -37,85 +56,118 @@
         width: 85%;
         max-width: 25em;
         background-color: darken($generic-bg, 25%);
-        display: flex;
-        justify-content: space-evenly;
-        padding: 4em 1em 4em 1em;
+        padding: 2.75em 0 4em 0;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        &__fork-container {
+        &__glass-container {
             
-            position: relative;
-            left: 1.5em;
-
             &--icon {
-                width: 5.5em;
-                
+            width: 2em;
             }
+
         }
 
-        &__dish-container {
+        &__ustensils {
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin-top: -1em;
             position: relative;
-            left: 3em;
+            left: -.75em;
+            top: .75em;
+            width: 17em;
 
+            &__fork-container {
+                position: relative;
+                left: 4em;
+                top: 1em;
 
-            &--large-dish {
-                width: 7em;
-                height: 7em;
-                background-color: $secundary-clr;
-                margin-left: .5em;
-                border-radius: 75px;
-                border: 2px solid black;
+                &--icon {
+                    width: 3.75em;
+                }
             }
 
-            &--large-ring {
-                width: .6em;
-                height: .6em;
-                background-color: black;
-                border-radius: 50px;
+            &__dish-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -1em;
                 position: relative;
-                left: -.45em;
-                animation: ball-rotation 2.5s infinite linear reverse;
-                transform-origin: -3.25em;
-            }
+                left: 3.2em;
+                top: .55em;
 
-            &--small-dish {
-                width: 4.5em;
-                height: 4.5em;
-                background-color: $tertiary-clr;
-                border-radius: 50px;
-                position: relative;
-                left: -6.5em;
-                border: 2px solid black;
-            }
-
-            &__balls-container {
-
-                &--ball-rotate {
-                width: .6em;
-                height: .6em;
-                background-color: black;
-                border-radius: 50px;
-                position: relative;
+                &--large-dish {
+                    width: 7.25em;
+                    height: 7.25em;
+                    background-color: lighten($primary-clr, 15%);
+                    margin-left: .5em;
+                    border-radius: 75px;
                 }
 
-                & > .ball-rotation {
+                &__timer-container {
+                    width: 0;
+                    height: 0;
+                    
+                    &--quarter {
+                        width: 3.175em;
+                        height: 3.175em;
+                        background-color: black;
+                        border-radius: 0 100px 0 0px;
+                        position: relative;
+                        
+                        background-color: lighten($secundary-clr, 17%);
+                    }
+                        
+                    & > .quarter1 {
 
-                    @include rotations-delay;
+                        @include star-timer1;
+
+                    }
+
+                    & > .quarter2 {
+
+                        @include star-timer2;
+                    }
+                }
+
+                &--small-dish {
+                    width: 4.5em;
+                    height: 4.5em;
+                    background-color: lighten($primary-clr, 25%);
+                    border-radius: 50px;
+                    position: relative;
+                    left: -5.85em;
                     
                 }
+
+                &__little-ring-container {
+
+                    &--ball-rotate {
+                    width: .6em;
+                    height: .6em;
+                    background-color: white;
+                    border-radius: 50px;
+                    position: relative;
+                    }
+
+                    & > .ball-rotation {
+                        
+                        @include rotations-delay;
+                        
+                    }
+                }
             }
-        }
 
-        &__knife-container {
-            position: relative;
-            left: -1.5em;
+            &__knife-container {
+                position: relative;
+                top: 0.75em;
+                left: -2.75em;
 
-            &--icon {
-                width: 5.5em;
+                &--icon {
+                    width: 4em;
+                }
             }
         }
     }

@@ -21,7 +21,7 @@
 }
 
 @mixin hover-btn--shadow ($i:$shadow-dark) {
-    box-shadow: 0.25rem 0.25rem 10px $i;
+    box-shadow: 0.25rem 0.25rem 15px $i;
 }
 @mixin mini-mobile {
     @media (max-width: 374px){@content;}
@@ -39,13 +39,40 @@
     @media (min-width: 1441px){@content;}
 }
 
-@mixin rotations-delay {
-    @for $i from 1 through 5 {
+
+@mixin star-timer1 {
+    @for $i from 1 through 2 {
         &--#{$i} {
-            left: -7.25em;
-            top: 0.45em+(-0.6em*$i);
-            animation: ball-rotation 1.8s 0.1s*$i infinite ease;
-            transform-origin: -1.55em 1.7em;
+            transform: rotate(-90deg+(90deg*$i));
+            top: -3.165em; 
+            left: -3.6em;
+            animation: timer 1.5s 0.2s*$i infinite backwards;
         }
     }   
 }
+
+@mixin star-timer2 {
+    @for $i from 1 through 2 {
+        &--#{$i}{
+            transform: rotate(90deg+(90deg*$i));
+            top: -6.3465em*$i;
+            left: -6.755em;
+            animation: timer 1.5s .6s*$i infinite backwards;
+        }
+    }
+}
+
+@mixin rotations-delay {
+    @for $i from 1 through 5 {
+        &--#{$i} {
+            left: -8.25em;
+            top: -.35em+(-.5em*$i);
+            animation: ball-rotation 1.5s 0.2s*$i infinite ease-out;
+            transform-origin: 0.25em 2em;
+            width: .7em+(-.075em*$i);
+            height: .7em+(-.075em*$i);
+        }
+    }   
+}
+
+

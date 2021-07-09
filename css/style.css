@@ -13,15 +13,6 @@
   width: 0.7rem;
 }
 
-@keyframes ball-rotation {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-
 @keyframes loading-spinner {
   from {
     opacity: 1;
@@ -32,10 +23,31 @@
   }
 }
 
+@keyframes timer {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ball-rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .background-loading-spinner {
   background-color: #eeeeee;
   position: fixed;
-  top: 3.25em;
+  top: 2em;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -50,110 +62,167 @@
   width: 85%;
   max-width: 25em;
   background-color: #aeaeae;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 4em 1em 4em 1em;
+  padding: 2.75em 0 4em 0;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.background-loading-spinner__tray__fork-container {
+.background-loading-spinner__tray__glass-container--icon {
+  width: 2em;
+}
+
+.background-loading-spinner__tray__ustensils {
+  display: flex;
+  justify-content: center;
   position: relative;
-  left: 1.5em;
+  left: -.75em;
+  top: .75em;
+  width: 17em;
 }
 
-.background-loading-spinner__tray__fork-container--icon {
-  width: 5.5em;
+.background-loading-spinner__tray__ustensils__fork-container {
+  position: relative;
+  left: 4em;
+  top: 1em;
 }
 
-.background-loading-spinner__tray__dish-container {
+.background-loading-spinner__tray__ustensils__fork-container--icon {
+  width: 3.75em;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -1em;
   position: relative;
-  left: 3em;
+  left: 3.2em;
+  top: .55em;
 }
 
-.background-loading-spinner__tray__dish-container--large-dish {
-  width: 7em;
-  height: 7em;
-  background-color: #FF79DA;
+.background-loading-spinner__tray__ustensils__dish-container--large-dish {
+  width: 7.25em;
+  height: 7.25em;
+  background-color: #bc95e9;
   margin-left: .5em;
   border-radius: 75px;
-  border: 2px solid black;
 }
 
-.background-loading-spinner__tray__dish-container--large-ring {
-  width: .6em;
-  height: .6em;
+.background-loading-spinner__tray__ustensils__dish-container__timer-container {
+  width: 0;
+  height: 0;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container__timer-container--quarter {
+  width: 3.175em;
+  height: 3.175em;
   background-color: black;
-  border-radius: 50px;
+  border-radius: 0 100px 0 0px;
   position: relative;
-  left: -.45em;
-  animation: ball-rotation 2.5s infinite linear reverse;
-  transform-origin: -3.25em;
+  background-color: #ffd0f2;
 }
 
-.background-loading-spinner__tray__dish-container--small-dish {
+.background-loading-spinner__tray__ustensils__dish-container__timer-container > .quarter1--1 {
+  transform: rotate(0deg);
+  top: -3.165em;
+  left: -3.6em;
+  animation: timer 1.5s 0.2s infinite backwards;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container__timer-container > .quarter1--2 {
+  transform: rotate(90deg);
+  top: -3.165em;
+  left: -3.6em;
+  animation: timer 1.5s 0.4s infinite backwards;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container__timer-container > .quarter2--1 {
+  transform: rotate(180deg);
+  top: -6.3465em;
+  left: -6.755em;
+  animation: timer 1.5s 0.6s infinite backwards;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container__timer-container > .quarter2--2 {
+  transform: rotate(270deg);
+  top: -12.693em;
+  left: -6.755em;
+  animation: timer 1.5s 1.2s infinite backwards;
+}
+
+.background-loading-spinner__tray__ustensils__dish-container--small-dish {
   width: 4.5em;
   height: 4.5em;
-  background-color: #99E2D0;
+  background-color: #d7c0f2;
   border-radius: 50px;
   position: relative;
-  left: -6.5em;
-  border: 2px solid black;
+  left: -5.85em;
 }
 
-.background-loading-spinner__tray__dish-container__balls-container--ball-rotate {
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate {
   width: .6em;
   height: .6em;
-  background-color: black;
+  background-color: white;
   border-radius: 50px;
   position: relative;
 }
 
-.background-loading-spinner__tray__dish-container__balls-container > .ball-rotation--1 {
-  left: -7.25em;
-  top: -0.15em;
-  animation: ball-rotation 1.8s 0.1s infinite ease;
-  transform-origin: -1.55em 1.7em;
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container > .ball-rotation--1 {
+  left: -8.25em;
+  top: -0.85em;
+  animation: ball-rotation 1.5s 0.2s infinite ease-out;
+  transform-origin: 0.25em 2em;
+  width: 0.625em;
+  height: 0.625em;
 }
 
-.background-loading-spinner__tray__dish-container__balls-container > .ball-rotation--2 {
-  left: -7.25em;
-  top: -0.75em;
-  animation: ball-rotation 1.8s 0.2s infinite ease;
-  transform-origin: -1.55em 1.7em;
-}
-
-.background-loading-spinner__tray__dish-container__balls-container > .ball-rotation--3 {
-  left: -7.25em;
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container > .ball-rotation--2 {
+  left: -8.25em;
   top: -1.35em;
-  animation: ball-rotation 1.8s 0.3s infinite ease;
-  transform-origin: -1.55em 1.7em;
+  animation: ball-rotation 1.5s 0.4s infinite ease-out;
+  transform-origin: 0.25em 2em;
+  width: 0.55em;
+  height: 0.55em;
 }
 
-.background-loading-spinner__tray__dish-container__balls-container > .ball-rotation--4 {
-  left: -7.25em;
-  top: -1.95em;
-  animation: ball-rotation 1.8s 0.4s infinite ease;
-  transform-origin: -1.55em 1.7em;
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container > .ball-rotation--3 {
+  left: -8.25em;
+  top: -1.85em;
+  animation: ball-rotation 1.5s 0.6s infinite ease-out;
+  transform-origin: 0.25em 2em;
+  width: 0.475em;
+  height: 0.475em;
 }
 
-.background-loading-spinner__tray__dish-container__balls-container > .ball-rotation--5 {
-  left: -7.25em;
-  top: -2.55em;
-  animation: ball-rotation 1.8s 0.5s infinite ease;
-  transform-origin: -1.55em 1.7em;
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container > .ball-rotation--4 {
+  left: -8.25em;
+  top: -2.35em;
+  animation: ball-rotation 1.5s 0.8s infinite ease-out;
+  transform-origin: 0.25em 2em;
+  width: 0.4em;
+  height: 0.4em;
 }
 
-.background-loading-spinner__tray__knife-container {
+.background-loading-spinner__tray__ustensils__dish-container__little-ring-container > .ball-rotation--5 {
+  left: -8.25em;
+  top: -2.85em;
+  animation: ball-rotation 1.5s 1s infinite ease-out;
+  transform-origin: 0.25em 2em;
+  width: 0.325em;
+  height: 0.325em;
+}
+
+.background-loading-spinner__tray__ustensils__knife-container {
   position: relative;
-  left: -1.5em;
+  top: 0.75em;
+  left: -2.75em;
 }
 
-.background-loading-spinner__tray__knife-container--icon {
-  width: 5.5em;
+.background-loading-spinner__tray__ustensils__knife-container--icon {
+  width: 4em;
 }
 
 @keyframes fullheart {
@@ -242,6 +311,18 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   footer {
+    padding-left: 2.5em;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  footer {
+    padding-left: 5em;
+  }
+}
+
+@media (min-width: 1441px) {
+  footer {
     padding-left: 5em;
   }
 }
@@ -318,7 +399,7 @@ footer h4 {
 
 .research-sublevel__btn:hover {
   opacity: 0.75;
-  box-shadow: 0.25rem 0.25rem 10px #7b7171;
+  box-shadow: 0.25rem 0.25rem 15px #7b7171;
 }
 
 .operating {
@@ -402,7 +483,7 @@ footer h4 {
 
 .operating__list-steps__item:hover {
   background-color: #e4d5f6;
-  box-shadow: 0.25rem 0.25rem 10px #7b7171;
+  box-shadow: 0.25rem 0.25rem 15px #7b7171;
 }
 
 .operating__list-steps__item:hover > .operating__list-steps__item__icon {
@@ -500,7 +581,7 @@ footer h4 {
 }
 
 .container-restaurants__shop:hover {
-  box-shadow: 0.25rem 0.25rem 10px #7b7171;
+  box-shadow: 0.25rem 0.25rem 15px #7b7171;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -757,6 +838,7 @@ footer h4 {
     margin-left: .75em;
     border-radius: 20px;
     background-color: #eeeeee;
+    border: 3px ridge #71d7be;
   }
 }
 
@@ -767,6 +849,7 @@ footer h4 {
     opacity: 0.75;
     border-radius: 25px;
     margin: 1em 20% 5em 20%;
+    border: 3px ridge #71d7be;
   }
 }
 
@@ -777,6 +860,7 @@ footer h4 {
     opacity: 0.75;
     border-radius: 25px;
     margin: 1em 20% 5em 20%;
+    border: 3px ridge #71d7be;
   }
 }
 
@@ -877,7 +961,7 @@ footer h4 {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .menusection__hdr__title {
-    background-color: #d7c0f2;
+    background-color: #c9abee;
     opacity: 1;
     width: auto;
     height: 25px;
@@ -885,14 +969,13 @@ footer h4 {
     padding-right: .5em;
     border-radius: 20px;
     margin-left: 14em;
-    border: 4px ridge #4acbab;
     padding-top: .1em;
   }
 }
 
 @media (min-width: 1441px) {
   .menusection__hdr__title {
-    background-color: #d7c0f2;
+    background-color: #c9abee;
     opacity: 1;
     width: auto;
     height: 25px;
@@ -900,7 +983,6 @@ footer h4 {
     padding-right: .5em;
     border-radius: 20px;
     margin-left: 14em;
-    border: 4px ridge #4acbab;
     padding-top: .1em;
   }
 }
@@ -963,7 +1045,7 @@ footer h4 {
 }
 
 .menusection__block__btn:hover {
-  box-shadow: 0.25rem 0.25rem 10px #7b7171;
+  box-shadow: 0.25rem 0.25rem 15px #7b7171;
 }
 
 .menusection__block__btn:hover > .menusection__block__btn__order {
@@ -980,7 +1062,7 @@ footer h4 {
     box-shadow: none;
   }
   .menusection__block__btn:hover {
-    box-shadow: 0.25rem 0.25rem 10px #9356DC;
+    box-shadow: 0.25rem 0.25rem 15px #7b7171;
   }
 }
 
@@ -989,7 +1071,7 @@ footer h4 {
     box-shadow: none;
   }
   .menusection__block__btn:hover {
-    box-shadow: 0.25rem 0.25rem 10px #9356DC;
+    box-shadow: 0.25rem 0.25rem 15px #7b7171;
   }
 }
 
@@ -998,7 +1080,7 @@ footer h4 {
     box-shadow: none;
   }
   .menusection__block__btn:hover {
-    box-shadow: 0.25rem 0.25rem 10px #9356DC;
+    box-shadow: 0.25rem 0.25rem 15px #7b7171;
   }
 }
 
@@ -1091,7 +1173,7 @@ footer h4 {
 
 .container-order__btn:hover {
   opacity: 0.75;
-  box-shadow: 0.25rem 0.25rem 10px #7b7171;
+  box-shadow: 0.25rem 0.25rem 15px #7b7171;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

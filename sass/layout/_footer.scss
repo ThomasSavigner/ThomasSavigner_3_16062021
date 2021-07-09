@@ -3,8 +3,14 @@ footer {
     padding: .75em 0 2.25em 1.2em;
     color: white;
     @include tablet {
-        padding-left: 5em;
+        padding-left: 2.5em;
     };
+    @include desktop {
+        padding-left: 5em;
+    }
+    @include desktop-L {
+        padding-left: 5em;
+    }
 
     & h4 {
         font-family: Shrikhand-Regular;
