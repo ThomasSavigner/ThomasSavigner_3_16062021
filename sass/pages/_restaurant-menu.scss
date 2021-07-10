@@ -116,6 +116,7 @@
         margin-left: .75em;
         border-radius: 20px;
         background-color: $generic-bg;
+        border: 3px ridge darken($tertiary-clr, 10%);
     };
     @include desktop {
         width: 100%;
@@ -123,6 +124,7 @@
         opacity: 0.75;
         border-radius: 25px;
         margin: 1em 20% 5em 20%;
+        border: 3px ridge darken($tertiary-clr, 10%);
     };
     @include desktop-L {
         width: 100%;
@@ -130,6 +132,7 @@
         opacity: 0.75;
         border-radius: 25px;
         margin: 1em 20% 5em 20%;
+        border: 3px ridge darken($tertiary-clr, 10%);
     };
     
     &__namerestaurant {
@@ -209,22 +212,27 @@
                 margin-left: 1em;
             };
             @include desktop {
-                background-color: lighten($primary-clr, 25%);
+                background-color: lighten($primary-clr, 20%);
                 opacity: 1;
                 width: auto;
+                height: 25px;
                 padding-left: .5em;
                 padding-right: .5em;
                 border-radius: 20px;
                 margin-left: 14em;
+                
+                padding-top: .1em;
             };
             @include desktop-L {
-                background-color: lighten($primary-clr, 25%);
+                background-color: lighten($primary-clr, 20%);
                 opacity: 1;
                 width: auto;
+                height: 25px;
                 padding-left: .5em;
                 padding-right: .5em;
                 border-radius: 20px;
                 margin-left: 14em;
+                padding-top: .1em;
             };
 
             &::before {
@@ -234,6 +242,12 @@
                 height: 0.2em;
                 position: absolute;
                 top: 1.5em;
+                @include desktop {
+                    display: none;
+                }
+                @include desktop-L{
+                    display: none;
+                }
             }
         }
     }
@@ -261,7 +275,8 @@
             overflow: hidden;
             
             &:hover {
-
+                @include hover-btn--shadow;
+                
                 & > .menusection__block__btn__order {
                     margin-right: 0;
                 
@@ -274,12 +289,26 @@
             @include tablet {
                 width: 23em;
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
             };
+
             @include desktop {
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
             };
+
             @include desktop-L {
                 box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
             };
 
             &__name {
